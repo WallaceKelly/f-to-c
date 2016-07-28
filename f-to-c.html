@@ -6,9 +6,23 @@
     <div>Enter a temperature in °F.</div>
 
     <input  id="fahrenheit" type="text" />
-    <button>Convert</button>
+    <button onclick="convert()">Convert</button>
     
     <div><span id="celsius"></span> C</div>
+
+<script>
+
+function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+
+function convert() {
+    var fahrenheit = document.getElementById('fahrenheit').value;
+    var celsius =  toCelsius(fahrenheit);
+    document.getElementById("celsius").innerHTML = celsius;
+}
+
+</script>
 
 </body>
 </html>
